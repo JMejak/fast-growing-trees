@@ -1,0 +1,439 @@
+// Import The Partials
+@import "variables";
+@import "mixins";
+
+
+// Import Font
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+
+
+//
+// Basic Body Styles
+// --------------------------------------------------
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:$primary-font;
+    font-size:$primary-font-size;
+    color:$primary-color;
+}
+
+a {
+    color:$brand-color;
+    text-decoration:none;
+}
+
+a:hover {
+    color:$brand-hover-color;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+.right {
+    float:right;
+}
+
+
+
+//
+// Button Styles
+// --------------------------------------------------
+
+.btn {
+    width:100%;
+    text-align:left;
+    padding:1em 0.75em;
+}
+
+.btn-submit {
+    padding:1em 0.75em;
+    background-color:$brand-color;
+    color:#FFF;
+    font-size:22px;
+    text-align:center;
+    font-weight:$bold-font;
+    &:hover {
+        color:#FFF;
+        background-color:$brand-hover-color;
+    }
+}
+
+.btn-default {
+    background-color:$brand-color;
+    color:#FFF;
+    text-align:center;
+    font-weight:$bold-font;
+    margin:1em 0;
+    &:hover {
+        color:#FFF;
+        background-color:$brand-hover-color;
+    }
+}
+
+label {
+    font-weight:$bold-font;
+    font-size:15px;
+}
+
+select {
+	background: #FFF;
+	border: 1px solid #d3d3d3;
+	border-radius: 4px;
+	width: 100%;
+	padding: 20px;
+	font-size: 16px;
+    color: #222;
+    margin:0 0 0.75em;
+
+	/* Here's the code we need */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	 -o-appearance: none;
+		appearance: none;
+}
+
+.height-options, .quantity-options, .must-quantity {
+    position: relative;
+    &:after {
+        font-family: FontAwesome;
+  	    content: '\f107';
+  	    font-size: 28px;
+  	    position: absolute;
+  	    top: 12px;
+  	    right: 20px;
+  	    color: #434B67;
+  	    pointer-events: none;
+    }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.must-quantity {
+    display:inline-block;
+    select {
+        width:85px !important;
+    }
+}
+
+.must-price {
+    font-weight:$bold-font;
+    display:block;
+    margin:0 0 0.5em;
+}
+
+
+
+
+//
+// Header Styles
+// --------------------------------------------------
+
+
+.site-header {
+    background-color:#222;
+}
+
+.logo {
+    max-width:200px;
+    height:auto;
+}
+
+
+
+//
+// Product Styles
+// --------------------------------------------------
+
+.title-row {
+    margin:1.25em 0;
+    padding:0 0 1em;
+    border-bottom:1px solid rgba(0,0,0,0.15);
+}
+
+
+.stars {
+    color:#ffd200;
+}
+
+.title-links {
+    margin:1em 0 0;
+}
+
+.social-links {
+    margin:0 0 0;
+    padding:0;
+    display:inline;
+    li {
+        list-style:none;
+        display:inline-block;
+        padding:0 0.3em;
+        a {
+            font-size:30px;
+        }
+    }
+}
+
+.facebook {
+    color:#3b5998 !important;
+}
+
+.twitter {
+    color:#1da1f2 !important;
+}
+
+.pinterest {
+    color:#e60023 !important;
+}
+
+.image-gallery {
+    width:100%;
+    height:500px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  .gallery-thumbs .swiper-slide {
+    height: 100%;
+    opacity: 0.4;
+  }
+  .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-pagination {
+      position:relative !important;
+  }
+
+
+//
+// Product Form Styles
+// --------------------------------------------------
+
+.product-price {
+    color:$brand-color;
+    font-weight:$bold-font;
+    font-size:50px;
+}
+
+.compare-price {
+    margin:0 0.5em;
+    text-decoration:line-through;
+}
+
+.shipping-block {
+    margin:1em 0;
+    padding:1em;
+    border-top:1px solid rgba(0,0,0,0.15);
+    border-bottom:1px solid rgba(0,0,0,0.15);
+    ul {
+        margin:0;
+        padding:0;
+        li {
+            list-style:none;
+            font-weight:$bold-font;
+            span {
+                color:$brand-color;
+            }
+        }
+    }
+    
+}
+
+
+//
+// Product Overview Styles
+// --------------------------------------------------
+
+.gray-bg {
+    margin:2em 0;
+    padding:1.25em 0;
+    background-color:$gray-bg;
+}
+
+ .accordion {
+    margin:1em 0 0;
+    background-color: #FFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+ }
+
+.accordion:after {
+        content: '\02795';
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+        margin-top:5px;
+      }
+
+  
+.active {
+    background-color: #FFF;
+  }
+  
+.active:after {
+        content: "\2796";
+    }
+  
+.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+.pill {
+    font-size:14px;
+    color:#FFF;
+    padding:1px 6px;
+    border-radius:1em;
+}
+
+.pill-blue {
+    background-color:#09f;
+}
+
+.pill-green {
+    background-color:#9c3;
+}
+
+.specs-table {
+    display:table;
+    width:100%;
+    font-size:15px;
+    dt, dd {
+        display:table-cell;
+        width:50%;
+        padding:5px 10px;
+        border-top:1px solid #dedede;
+        border-bottom:1px solid #dedede;
+        vertical-align:middle;
+    }
+    dt {
+        background-color:rgba(1,118,139,.08);
+    }
+}
+
+table {
+    margin:2em 0;
+    width:100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    th, td {
+        text-align:left;
+        padding:0.625em 1.25em;
+        line-height:1.1;
+        border:1px solid #dedede;
+    }
+    th {
+        background-color:rgba(1,118,139,.08);
+    }
+}
+
+
+
+//
+// Other Product Panel Styles
+// --------------------------------------------------
+
+.op-panel {
+    width:100%;
+    height:auto;
+    padding:1em;
+    margin:1em 0;
+    background-color:#FFF;
+    text-align:center;
+}
+
+
+
+
+//
+// Customer Review Styles
+// --------------------------------------------------
+
+.review-wrapper {
+    margin:1em 0;
+    padding:1em 0;
+    border-top:1px solid #dedede;
+}
+
+.details {
+    font-weight:$bold-font;
+    .avatar {
+        display:inline-block;
+        width:45px;
+        height:45px;
+        background-color:$brand-color;
+        color:#FFF;
+        font-size:20px;
+        text-align:center;
+        line-height:45px;
+        font-weight:$bold-font;
+        @include border-radius(45px);
+    }
+    .review-date {
+        color:#999;
+        line-height:45px;
+        font-weight:400;
+        font-size:15px;
+    }
+}
+
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
+
+
+
+
+//
+// Footer Styles
+// --------------------------------------------------
+
+
+.site-footer {
+    width:100%;
+    height:auto;
+    margin:2em 0 0;
+    padding:2em;
+    background-color:#222;
+    color:#FFF;
+}
